@@ -18,7 +18,7 @@
 #### &nbsp; 'cout << "Geometric progression: " << geo;'
 #### '}'
 
-'''C++
+``` C++
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -39,4 +39,4 @@ int main () {
   cout << "\n" << "Arithmetic progression: " << arit << "\n";
   cout << "Geometric progression: " << geo;
 }
-'''
+```
