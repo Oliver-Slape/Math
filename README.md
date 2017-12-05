@@ -96,6 +96,7 @@ vector<string> split(string value, char token) {
 	return vect;
 }
 ```
+##
 
 ## Greatest Common Divisor and Least Common Multiple
 ### In maths the Greatest Common Divisor (GCD) is the largest positive integer that divides into two or more integers which are not all 0.
@@ -118,5 +119,5 @@ vector<string> split(string value, char token) {
 ### What is the probability of having at least a 2 when rolling two dice? Well again there is 36 possibilities. 11 of these contain a 2. these are: 1,2 2,1 2,3 3,2 4,2 2,4 5,2 2,5 6,2 2,6 2,2. Therefore the probability of having at least one 2 when rolling two dice is P(11/36). 
 ## Independent events.
 ### Independent events dont get effected from events that have happened before. This can also be quantified into probability. We can do this by multiplying the probability of independent single events.   
-## Example
+## Examples.
 ### What is the probability of rolling a 7 after rolling a 2? The probability for both of these we already know as P(1/6) and P(11/36). Because these two events happen independently we have to multiply the Probabilities of the single events to get the Probability of two independent events. This will be P(1/6) X P(11/36). P(1/6) X P(11/36) = P(11/216). 
