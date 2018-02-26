@@ -26,7 +26,7 @@ int main () {
 }
 ```
 ## Identify simple shapes using Co-Ordinates
-### https://repl.it/@O_Slape/Shape-finder-from-Coordinates
+### https://repl.it/@O_Slape/Shape-find
 
 ``` C++
 #include <iostream>
@@ -40,48 +40,75 @@ int main () {
 using namespace std;
 
 vector<string> split(string value, char token);
+bool CheckCoordRange(int opt);
+bool CheckDiffInput(int count, string o);
+
+bool keepAlive = true;
+
+int maxCoords = 4;
+int minCoords = 3;
+int Triangle = 3;
+int Square = 4;
+int count = 0;
 
 int main() {
-  int maxCoords = 4;
-  int minCoords = 2;
-  string shape[maxCoords - 1]; // [0, 1, 2, 3, 4]
+
+  string shape[maxCoords]; // [0,1 , 1, 2, 2, 10, 3, 4] 
+
   
-  for (int i = 0; i < maxCoords; i++ ) {
-    cout << "Please enter next Coordinate (x,y):";
+  // Main Loop
+  while(keepAlive) {
+    // Increment the counter
+    count++;
+    cout << "Iteration " << count << endl;
+    cout << "Please enter Coordinate (x,y):";
     string o;
     cin >> o;
-    shape[i] = o;
-    if (i == minCoords) { // i == 3?
-      string option;
-      cout << "Continue ? (y/N)";
-      cin >> option;
-      if(option == "Y" || option == "y"){
-         continue;
-      } else {
-        break;
-      }
+    if(count == 4){
+      cout << "This is a Square" << endl;
+      keepAlive = false;
     }
-  }
-  
-  for(int i=0; i < maxCoords; i++){
-    cout << shape[i] << endl;
-  }
-  
-  // Do the identify algorith
-  // Check if it's a valid shape
-  // Check if it's a triangle
-  // Check if it's a rectangle/square
-
-  //num [0][0] = split (input, ',').at(0);
-  //num [0][0] = split (input, ',').at(1);
-  
-  //else{
-    //cout << "No shape has only 1 Coordinate!";
-  //}
-  //cout << num[9];
-  
+    vector<string> input = split(o, ',');
+    // Cheeck if input is valid, otherwise output an error and restart
+    if (!(CheckCoordRange(std::stoi(input[0])) && CheckCoordRange(std::stoi(input[1])))){ // 0 - 9
+      cout << "Incorrect not a Coordinate" << endl;
+      count--;
+      continue;
+    }
+    
+    // Add the option to the list
+    shape[count] = o;
+    
+    // Check if reached to minimum allowed inputs
+    if (count == minCoords) { // i == 3?
+      cout << "Continue ? (y/N)";
+      cin >> o;
+      if(!(o == "Y" || o == "y")){
+        //CheckDiffInput(count, o);
+        cout << "This is a Triangle" << endl;
+        keepAlive = false;
+      }
+        else{
+          continue;
+        }
+    }
+    // Check to see if reached to max coords
+    if(count == maxCoords)
+       keepAlive = false;
+ }
+ 
   return 0;
 }
+
+bool CheckCoordRange(int opt) {
+  if (opt >= 0 && opt <= 9){
+    return true;
+  }
+  
+  return false;
+}
+
+
 
 vector<string> split(string value, char token) {
 	stringstream ss(value);
