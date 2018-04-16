@@ -152,3 +152,6 @@ vector<string> split(string value, char token) {
 ## Examples.
 ### What is the probability of rolling a 7 after rolling a 2? 
 ### The probability for both of these we already know as P(1/6) and P(11/36). Because these two events happen independently we have to multiply the Probabilities of the single events to get the Probability of two independent events. This will be P(1/6) X P(11/36). P(1/6) X P(11/36) = P(11/216). 
+
+## Event from a discrete random variable
+### If we want to have a random variable such as an integer there needs to be a standard at which we call random. If we use two integers for this, we can have the random integer and find the probability of it being divisable by 5. For the random integer lets call it X, we have to decide a range that is acceptable. If we dont set a range there is an inifinite amount of possible numbers that could be X as integers are any whole number positive or negative and we cant calculate that. Assume A is a very large negative number and B is a very large positive number and this our range. We can randomly assign X between the range of A and B. We know that every 5th number is divisible by 5. So the proabaility of X/5 is the range of A to B divided by 5. 
