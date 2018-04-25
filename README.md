@@ -157,7 +157,9 @@ vector<string> split(string value, char token) {
 ### If we want to have a random variable such as an integer there needs to be a standard at which we call random. If we use two integers for this, we can have the random integer and find the probability of it being divisible by 5. For the random integer let’s call it X, we have to decide a range that is acceptable. If we don’t set a range there is an infinite amount of possible numbers that could be X as integers are any whole number positive or negative and we can’t calculate that. Assume A is a very large negative number and B is a very large positive number and this our range. We can randomly assign X between the range of A and B. We know that every 5th number is divisible by 5. So the probability of X/5 is the range of A to B divided by 5. 
 
 ## Vectors
-### A Vector is a geometric object that has magnitude (Length) and direction. 
+### A Vector is a geometric object that has magnitude (Length) and direction.
+![Vector]( https://github.com/Oliver-Slape/Math/blob/master/Vector.PNG) 
+
 
 ## Algebraic rate of change.
 ### Describes the rate at which one quantity is changing with a corresponding quantity.
