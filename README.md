@@ -276,7 +276,7 @@ function shape(){
 ![Pic]( https://github.com/Oliver-Slape/Math/blob/master/RateofChange.png) 
 
 ### Rate of change from 10 to 100
-#### '(2*100+3)-(2*10+3)/(100-10)=180/90= 2'
+ <h3> (2*100+3)-(2*10+3)/(100-10)=180/90= 2 <h3>
 
 
 
