@@ -278,6 +278,9 @@ function shape(){
 ### Rate of change from 10 to 100
  <h3> (2*100+3)-(2*10+3)/(100-10)=180/90= 2 <h3>
 
+## Integral calculas for area
+### Definite integral integrate a fucntion between 2 points so we can find the precise value of the integral. 
+![Integral]( https://github.com/Oliver-Slape/Math/blob/master/Integral.PNG) 
 
 
 
